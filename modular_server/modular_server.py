@@ -13,11 +13,11 @@ from serial_device2 import SerialDevice, SerialDevices, find_serial_device_ports
 
 try:
     from pkg_resources import get_distribution, DistributionNotFound
-    _dist = get_distribution('modular_device')
+    _dist = get_distribution('modular_server')
     # Normalize case for Windows systems
     dist_loc = os.path.normcase(_dist.location)
     here = os.path.normcase(__file__)
-    if not here.startswith(os.path.join(dist_loc, 'modular_device')):
+    if not here.startswith(os.path.join(dist_loc, 'modular_server')):
         # not installed, but there is another version that *is*
         raise DistributionNotFound
 except (ImportError,DistributionNotFound):
@@ -29,9 +29,9 @@ else:
 DEBUG = False
 BAUDRATE = 9600
 
-class ModularDevice(object):
+class ModularServer(object):
     '''
-    ModularDevice contains an instance of serial_device2.SerialDevice and
+    ModularServer contains an instance of serial_device2.SerialDevice and
     adds methods to it, like auto discovery of available modular devices
     in Linux, Windows, and Mac OS X. This class automatically creates
     methods from available functions reported by the modular device when
@@ -249,7 +249,7 @@ class ModularDevice(object):
         return response
 
 
-class ModularDevices(dict):
+class ModularServers(dict):
     '''
     ModularDevices inherits from dict and automatically populates it with
     ModularDevices on all available serial ports. Access each individual
@@ -333,7 +333,7 @@ def json_decode_list(data):
         rv.append(item)
     return rv
 
-def find_modular_device_ports(baudrate=None,
+def find_modular_server_ports(baudrate=None,
                               model_number=None,
                               serial_number=None,
                               try_ports=None,
@@ -364,12 +364,12 @@ def find_modular_device_ports(baudrate=None,
             pass
     return modular_device_ports
 
-def find_modular_device_port(baudrate=None,
+def find_modular_server_port(baudrate=None,
                              model_number=None,
                              serial_number=None,
                              try_ports=None,
                              debug=DEBUG):
-    modular_device_ports = find_modular_device_ports(baudrate=baudrate,
+    modular_server_ports = find_modular_device_ports(baudrate=baudrate,
                                                      model_number=model_number,
                                                      serial_number=serial_number,
                                                      try_ports=try_ports,

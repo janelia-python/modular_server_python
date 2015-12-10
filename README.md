@@ -1,7 +1,7 @@
-#modular_device_python
+#modular_server_python
 
-This Python package (modular\_device) creates a class named
-ModularDevice, which contains an instance of
+This Python package (modular\_server) creates a class named
+ModularServer, which contains an instance of
 serial\_device2.SerialDevice and adds methods to it, like auto
 discovery of available modular devices in Linux, Windows, and Mac OS
 X. This class automatically creates methods from available functions

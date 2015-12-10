@@ -18,7 +18,7 @@ License::
 
 Example Usage::
 
-    from modular_device import ModularDevice
+    from modular_server import ModularServer
     dev = ModularDevice() # Might automatically finds device if one available
     # if it is not found automatically, specify port directly
     dev = ModularDevice(port='/dev/ttyACM0') # Linux specific port
