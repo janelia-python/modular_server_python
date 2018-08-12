@@ -10,7 +10,7 @@ appropriate firmware.
 
 Authors::
 
-    Peter Polidoro <polidorop@janelia.hhmi.org>
+    Peter Polidoro <peterpolidoro@gmail.com>
 
 License::
 
@@ -34,4 +34,3 @@ Example Usage::
     devs = ModularDevices(use_ports=['COM3','COM4']) # Windows
     devs.items()
     dev = devs[name][serial_number]
-
