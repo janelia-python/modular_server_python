@@ -1,6 +1,6 @@
 #+TITLE: modular_server_python
 #+AUTHOR: Peter Polidoro
-#+EMAIL: peterpolidoro@gmail.com
+#+EMAIL: peter@polidoro.io
 
 * Package Information
   - Name :: modular_server_python
@@ -8,4 +8,4 @@
   - License :: BSD
   - URL :: https://github.com/janelia-pypi/modular_server_python
   - Author :: Peter Polidoro
-  - Email :: peterpolidoro@gmail.com
+  - Email :: peter@polidoro.io
